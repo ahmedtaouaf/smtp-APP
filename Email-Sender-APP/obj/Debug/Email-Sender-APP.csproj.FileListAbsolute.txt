@@ -1,0 +1,10 @@
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\bin\Debug\Email-Sender-APP.exe.config
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\bin\Debug\Email-Sender-APP.exe
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\bin\Debug\Email-Sender-APP.pdb
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\obj\Debug\Email-Sender-APP.csprojAssemblyReference.cache
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\obj\Debug\Email_Sender_APP.Form1.resources
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\obj\Debug\Email_Sender_APP.Properties.Resources.resources
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\obj\Debug\Email-Sender-APP.csproj.GenerateResource.cache
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\obj\Debug\Email-Sender-APP.csproj.CoreCompileInputs.cache
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\obj\Debug\Email-Sender-APP.exe
+c:\users\pc\source\repos\Email-Sender-APP\Email-Sender-APP\obj\Debug\Email-Sender-APP.pdb
