@@ -31,6 +31,15 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btnSend = new System.Windows.Forms.Button();
             this.Setting = new System.Windows.Forms.GroupBox();
+            this.checkSSL = new System.Windows.Forms.CheckBox();
+            this.txtSmtp = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPort = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTo = new System.Windows.Forms.TextBox();
             this.txtCC = new System.Windows.Forms.TextBox();
@@ -39,15 +48,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPort = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSmtp = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checkSSL = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.Setting.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,120 +92,15 @@
             this.Setting.TabStop = false;
             this.Setting.Text = "Settings";
             // 
-            // label1
+            // checkSSL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "To :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtTo
-            // 
-            this.txtTo.Location = new System.Drawing.Point(96, 44);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(579, 20);
-            this.txtTo.TabIndex = 0;
-            // 
-            // txtCC
-            // 
-            this.txtCC.Location = new System.Drawing.Point(96, 83);
-            this.txtCC.Name = "txtCC";
-            this.txtCC.Size = new System.Drawing.Size(579, 20);
-            this.txtCC.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CC :";
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.Location = new System.Drawing.Point(96, 120);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(579, 20);
-            this.txtSubject.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Subject :";
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Location = new System.Drawing.Point(96, 164);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(579, 251);
-            this.txtMessage.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Message :";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(74, 78);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(116, 20);
-            this.txtPassword.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Password :";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(74, 39);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(116, 20);
-            this.txtUsername.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Username :";
-            // 
-            // txtPort
-            // 
-            this.txtPort.Location = new System.Drawing.Point(74, 117);
-            this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(66, 20);
-            this.txtPort.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 120);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Port :";
+            this.checkSSL.AutoSize = true;
+            this.checkSSL.Location = new System.Drawing.Point(211, 41);
+            this.checkSSL.Name = "checkSSL";
+            this.checkSSL.Size = new System.Drawing.Size(46, 17);
+            this.checkSSL.TabIndex = 4;
+            this.checkSSL.Text = "SSL";
+            this.checkSSL.UseVisualStyleBackColor = true;
             // 
             // txtSmtp
             // 
@@ -219,21 +118,167 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "SMTP :";
             // 
-            // checkSSL
+            // txtPort
             // 
-            this.checkSSL.AutoSize = true;
-            this.checkSSL.Location = new System.Drawing.Point(211, 41);
-            this.checkSSL.Name = "checkSSL";
-            this.checkSSL.Size = new System.Drawing.Size(46, 17);
-            this.checkSSL.TabIndex = 4;
-            this.checkSSL.Text = "SSL";
-            this.checkSSL.UseVisualStyleBackColor = true;
+            this.txtPort.Location = new System.Drawing.Point(74, 117);
+            this.txtPort.Name = "txtPort";
+            this.txtPort.Size = new System.Drawing.Size(66, 20);
+            this.txtPort.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 120);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Port :";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(74, 78);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(116, 20);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(74, 39);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(116, 20);
+            this.txtUsername.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Password :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Username :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "To :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtTo
+            // 
+            this.txtTo.Location = new System.Drawing.Point(96, 14);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(447, 20);
+            this.txtTo.TabIndex = 0;
+            // 
+            // txtCC
+            // 
+            this.txtCC.Location = new System.Drawing.Point(96, 53);
+            this.txtCC.Name = "txtCC";
+            this.txtCC.Size = new System.Drawing.Size(447, 20);
+            this.txtCC.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "CC :";
+            // 
+            // txtSubject
+            // 
+            this.txtSubject.Location = new System.Drawing.Point(96, 90);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(447, 20);
+            this.txtSubject.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Subject :";
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Location = new System.Drawing.Point(96, 134);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(579, 251);
+            this.txtMessage.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(31, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Message :";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(600, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Import";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(600, 47);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Settings";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(600, 90);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Import";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(549, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Nbr :";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 639);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSubject);
@@ -250,6 +295,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Send mail";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Setting.ResumeLayout(false);
             this.Setting.PerformLayout();
             this.ResumeLayout(false);
@@ -279,6 +325,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label9;
     }
 }
 
