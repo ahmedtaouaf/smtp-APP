@@ -25,7 +25,6 @@ namespace Email_Sender_APP
         {
             InitializeComponent();
 
-            // Set the ExcelPackage.LicenseContext in the Form1 constructor or Form1_Load event
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
         }
 
@@ -33,15 +32,19 @@ namespace Email_Sender_APP
         {
 
         }
-
+        string smtpServer = "smtp.gmail.com";
+        int port = 587;
+        string username = "taouafhero@gmail.com";
+        string password = "urcp sngb ranb tjwx";
         private void btnSend_Click(object sender, EventArgs e)
         {
             try
             {
-                string smtpServer = "smtp.gmail.com";
-                int port = 587;
-                string username = "taouafhero@gmail.com";
-                string password = "urcp sngb ranb tjwx";
+               
+                //string smtpServer = "smtp.gmail.com";
+                //int port = 587;
+                //string username = "dinfo@far.ma";
+                //string password = "123456789";
 
                 string to = txtTo.Text;
                 string cc = txtCC.Text;
@@ -54,15 +57,19 @@ namespace Email_Sender_APP
                     client.EnableSsl = true;
                     client.Credentials = new NetworkCredential(username, password);
 
-                    // Split the 'to' string into an array of email addresses
                     string[] toAddresses = to.Split(',');
 
-                    foreach (var toAddress in toAddresses)
+                    label9.Text = $"Nbr : {toAddresses.Length}";
+
+                    txtConsole.Clear();
+                   
+
+                        foreach (var toAddress in toAddresses)
                     {
                         using (MailMessage mailMessage = new MailMessage())
                         {
                             mailMessage.From = new MailAddress(username, "Sender Name", Encoding.UTF8);
-                            mailMessage.To.Add(new MailAddress(toAddress.Trim()));  // Trim to remove any extra spaces
+                            mailMessage.To.Add(new MailAddress(toAddress.Trim()));  
 
                             if (!string.IsNullOrEmpty(cc))
                                 mailMessage.CC.Add(cc);
@@ -73,13 +80,26 @@ namespace Email_Sender_APP
                             mailMessage.IsBodyHtml = true;
                             mailMessage.Priority = MailPriority.Normal;
 
-                            client.Send(mailMessage);
+                            try
+                            {
+                                client.Send(mailMessage);
+                                txtConsole.AppendText($"[{DateTime.Now}] Email sent successfully to: {toAddress.Trim()}\n\n");
+                            }
+                            catch (Exception ex)
+                            {
+                                txtConsole.AppendText($"[{DateTime.Now}] Failed to send email to {toAddress.Trim()}. Error: {ex.Message}\n\n");
+                            }
                         }
+
+                        txtConsole.SelectionStart = txtConsole.Text.Length;
+                        txtConsole.ScrollToCaret();
+                        txtConsole.Refresh();
                     }
 
-                    MessageBox.Show("Your message has been successfully sent.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Your messages have been successfully sent.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -126,7 +146,6 @@ namespace Email_Sender_APP
 
                     for (int row = 1; row <= rowCount; row++)
                     {
-                        // Assuming email addresses are in the first column (column A)
                         string emailAddress = worksheet.Cells[row, 1].Value?.ToString();
 
                         if (!string.IsNullOrEmpty(emailAddress) && IsValidEmail(emailAddress))
@@ -156,10 +175,10 @@ namespace Email_Sender_APP
         {
             
 
-            txtSmtp.Text = "smtp.gmail.com";
+            txtSmtp.Text = smtpServer;
             txtPort.Text = "587";
-            txtUsername.Text = "taouafhero@gmail.com";
-            txtPassword.Text = "urcp sngb ranb tjwx";
+            txtUsername.Text = username;
+            txtPassword.Text = password;
         }
     }
 }

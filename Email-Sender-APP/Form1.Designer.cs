@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btnSend = new System.Windows.Forms.Button();
             this.Setting = new System.Windows.Forms.GroupBox();
             this.checkSSL = new System.Windows.Forms.CheckBox();
@@ -52,16 +51,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtConsole = new System.Windows.Forms.TextBox();
             this.Setting.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 617);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(692, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // btnSend
             // 
@@ -85,9 +77,9 @@
             this.Setting.Controls.Add(this.label5);
             this.Setting.Controls.Add(this.label6);
             this.Setting.Controls.Add(this.btnSend);
-            this.Setting.Location = new System.Drawing.Point(96, 432);
+            this.Setting.Location = new System.Drawing.Point(34, 400);
             this.Setting.Name = "Setting";
-            this.Setting.Size = new System.Drawing.Size(473, 157);
+            this.Setting.Size = new System.Drawing.Size(425, 178);
             this.Setting.TabIndex = 4;
             this.Setting.TabStop = false;
             this.Setting.Text = "Settings";
@@ -181,14 +173,14 @@
             // 
             this.txtTo.Location = new System.Drawing.Point(96, 14);
             this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(447, 20);
+            this.txtTo.Size = new System.Drawing.Size(513, 20);
             this.txtTo.TabIndex = 0;
             // 
             // txtCC
             // 
             this.txtCC.Location = new System.Drawing.Point(96, 53);
             this.txtCC.Name = "txtCC";
-            this.txtCC.Size = new System.Drawing.Size(447, 20);
+            this.txtCC.Size = new System.Drawing.Size(513, 20);
             this.txtCC.TabIndex = 1;
             // 
             // label2
@@ -204,7 +196,7 @@
             // 
             this.txtSubject.Location = new System.Drawing.Point(96, 90);
             this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(447, 20);
+            this.txtSubject.Size = new System.Drawing.Size(513, 20);
             this.txtSubject.TabIndex = 2;
             // 
             // label3
@@ -235,7 +227,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(600, 12);
+            this.button1.Location = new System.Drawing.Point(751, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
@@ -245,7 +237,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(600, 47);
+            this.button2.Location = new System.Drawing.Point(751, 50);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 10;
@@ -254,7 +246,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(600, 90);
+            this.button3.Location = new System.Drawing.Point(751, 93);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 11;
@@ -264,17 +256,26 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(549, 17);
+            this.label9.Location = new System.Drawing.Point(632, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 13);
             this.label9.TabIndex = 12;
             this.label9.Text = "Nbr :";
             // 
+            // txtConsole
+            // 
+            this.txtConsole.Location = new System.Drawing.Point(465, 400);
+            this.txtConsole.Multiline = true;
+            this.txtConsole.Name = "txtConsole";
+            this.txtConsole.Size = new System.Drawing.Size(399, 178);
+            this.txtConsole.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 639);
+            this.ClientSize = new System.Drawing.Size(896, 639);
+            this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -288,7 +289,6 @@
             this.Controls.Add(this.txtTo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Setting);
-            this.Controls.Add(this.statusStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -304,8 +304,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.GroupBox Setting;
         private System.Windows.Forms.Label label1;
@@ -329,6 +327,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtConsole;
     }
 }
 
